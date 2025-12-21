@@ -1,6 +1,7 @@
 import msvcrt
 import os
 from os import system
+from typing import Any
 
 import requests
 
