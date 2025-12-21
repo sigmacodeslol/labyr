@@ -32,6 +32,7 @@ def getch():
 
 def getchar(d, arg):
     return d.get(arg, d["DEFAULTS"][arg])
+    return d.get(arg, d["DEFAULTS"].get(arg))
 
 
 def clsscr(*args):
