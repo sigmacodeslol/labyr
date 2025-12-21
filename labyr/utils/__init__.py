@@ -20,6 +20,21 @@ def box(string: str) -> str:
     return f"{border}\n" + "\n".join(boxed_lines) + f"\n{border}"
 
 
+def extract(level_defs: list[dict], attr: str) -> list[Any]:
+    sizes: list[Any] = []
+
+    for level in level_defs:
+        size = level.get(attr)
+        if (
+            isinstance(size, tuple)
+            and len(size) == 2
+            and all(isinstance(n, int) for n in size)
+        ):
+            sizes.append(size)
+
+    return sizes
+
+
 def getch():
     try:
         ch = msvcrt.getch()
