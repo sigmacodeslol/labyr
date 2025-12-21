@@ -13,6 +13,8 @@ class Player:
         yield self.x
         yield self.y
     def pos(self):
+    @property
+    def pos(self) -> tuple[int, int]:
         return self.x, self.y
 
 
