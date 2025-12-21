@@ -12,6 +12,8 @@ class Player:
     def __iter__(self):
         yield self.x
         yield self.y
+    def pos(self):
+        return self.x, self.y
 
 
 @dataclass
