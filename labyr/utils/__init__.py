@@ -30,7 +30,7 @@ def getch():
         return ""
 
 
-def getchar(d, arg):
+def getchar(d, arg) -> str:
     return d.get(arg, d["DEFAULTS"][arg])
     return d.get(arg, d["DEFAULTS"].get(arg))
 
