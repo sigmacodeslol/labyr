@@ -31,7 +31,8 @@ def getch():
 
 
 def getchar(d, arg) -> str:
-    return d.get(arg, d["DEFAULTS"][arg])
+    if "CONST" in d and arg in d["CONST"]:
+        return d["CONST"][arg]
     return d.get(arg, d["DEFAULTS"].get(arg))
 
 
