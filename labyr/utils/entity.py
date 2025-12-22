@@ -53,7 +53,7 @@ class EntMan:
         for lvl, lmap in levels.items():
             self._entities[lvl] = retTable(lmap)
 
-    def get(self, lvl: int, entity: str) -> Player | Actiwall:
+    def get(self, lvl: int, entity: str):
         return self._entities[lvl][entity]
 
 
